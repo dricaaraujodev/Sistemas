@@ -88,7 +88,7 @@ async function sendPrivate(src, dst, message) {
 
 // Publicar em canal (ordem visual corrigida)
 async function publish(user, channel, message) {
-  console.log(`${user} publicou no ${channel}: 💬 "${message}"`);
+  console.log(`${user} publicou no canal ${channel}: 💬 "${message}"`);
   await req.send(JSON.stringify({ service: "publish", data: { user, channel, message } }));
   await req.receive(); // apenas para consumir resposta
 }
