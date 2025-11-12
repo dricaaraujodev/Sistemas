@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  server:
+    build: ./server
+    container_name: server
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./server/data:/app/data   # persiste os arquivos JSON no host
+
+  client:
+    build: ./client
+    container_name: client
+    depends_on:
+      - server
+
+  bot:
+    build: ./bot
+    container_name: bot
+    depends_on:
+      - server
