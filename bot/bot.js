@@ -118,21 +118,20 @@ async function publish(user, channel, message) {
     }
 
     // MENSAGEM PRIVADA [PRV] (Substitui 💌)
-    if (topic === BOT_NAME && pl.startsWith("[PRV]")) {
-      // Regex espera: [PRV] Bob recebeu mensagem privada de Alice: "Oi Bob..."
-      const match = pl.match(/\[PRV\]\s*(.*?)\s+recebeu mensagem privada de\s+(.*?):\s*"(.*)"/);
-      if (match) {
-        const receiver = match[1];
-        const sender = match[2];
-        const message = match[3];
-        if (receiver === BOT_NAME) {
-          console.log(`💌 ${BOT_NAME} recebeu mensagem privada de ${sender}: "${message}"`);
-        }
-      } else {
-        console.log(`💌 ${BOT_NAME} recebeu (privado, não formatado): ${pl}`);
-      }
-      continue;
+   if (topic === BOT_NAME && pl.startsWith("[PRV]")) {
+  const match = pl.match(/\[PRV\]\s*(.*?)\s+recebeu mensagem privada de\s+(.*?):\s*"(.*)"/);
+  if (match) {
+    const receiver = match[1];
+    const sender = match[2];
+    const message = match[3];
+    if (receiver === BOT_NAME) {
+      console.log(`💌 ${BOT_NAME} recebeu mensagem privada de ${sender}: "${message}"`);
     }
+  } else {
+    console.log(`💌 ${BOT_NAME} recebeu (privado, não formatado): ${pl}`);
+  }
+  continue;
+}
 
     // MENSAGEM PÚBLICA [PUB] (Substitui 💬)
     if (pl.startsWith("[PUB]")) {

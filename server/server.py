@@ -24,12 +24,15 @@ print("🧠 Servidor iniciado — REQ/REP em 5555, PUB → broker:5557")
 users = {}       # users[name] = {"online": True/False, "ts": "2025-11-12T14:00:00Z"}
 channels = ["geral"]
 
+
 def now_iso():
     return datetime.utcnow().isoformat()
+
 
 def broadcast(channel, message):
     """Envia uma mensagem pública via PUB socket."""
     pub.send_string(f"{channel}|{message}")
+
 
 while True:
     try:
@@ -133,16 +136,16 @@ while True:
             continue
 
         if users.get(dst, {}).get("online"):
-            # 1. Cria o payload no formato esperado pelo bot.js, usando prefixo [PRV]
+            # Cria o payload no formato esperado pelo bot.js
             payload_privada = f"[PRV] {dst} recebeu mensagem privada de {src}: \"{message}\""
 
-            # 2. Confirma para o remetente que foi entregue (REP)
+            # Confirma entrega ao remetente
             rep.send_json({
                 "service": "message",
                 "data": {"status": "DELIVERED", "timestamp": ts}
             })
 
-            # 3. Publica a mensagem no TÓPICO DO DESTINATÁRIO (dst)
+            # Publica no tópico do destinatário
             pub.send_string(f"{dst}|{payload_privada}")
             print(f"🔒 ENTREGUE: {src} -> {dst}: \"{message}\"")
         else:
@@ -155,22 +158,6 @@ while True:
                     "timestamp": ts
                 }
             })
-        continue
-
-    # =========================================================
-    # LOGOUT
-    # =========================================================
-    if service == "logout":
-        user = data.get("user")
-        if user in users:
-            users[user]["online"] = False
-            broadcast("geral", f"🔴 {user} saiu do canal geral")
-            print(f"🔴 LOGOUT: {user}")
-
-        rep.send_json({
-            "service": "logout",
-            "data": {"status": "OK", "timestamp": ts}
-        })
         continue
 
     # =========================================================
