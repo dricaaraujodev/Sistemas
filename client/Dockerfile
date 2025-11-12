@@ -1,23 +1,21 @@
-FROM golang:1.24
+FROM golang:1.24.5
 
 WORKDIR /app
-COPY go.mod go.sum ./
 
-# Instala bibliotecas do sistema necessárias para zmq4
+# dependências do sistema para zmq4
 RUN apt-get update && apt-get install -y \
     pkg-config \
     libzmq3-dev \
  && rm -rf /var/lib/apt/lists/*
 
-# Baixa dependências
+COPY go.mod go.sum ./
 RUN go mod download
 
-# Copia o restante do código. 
-# ESTA LINHA É CRUCIAL, POIS COPIA O main.go PARA /app
-COPY . . 
+COPY . .
 
-# Compila o client. 
-# AGORA O main.go está em /app, e o build deve funcionar.
 RUN go build -o client
+
+# cria diretório para persistência
+RUN mkdir -p /app/data
 
 CMD ["./client"]

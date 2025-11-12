@@ -1,21 +1,59 @@
 version: "3.9"
+
 services:
+  broker:
+    build: ./broker
+    container_name: broker
+    ports:
+      - "5557:5557"   # XSUB do broker
+      - "5558:5558"   # XPUB do broker
+
   server:
     build: ./server
     container_name: server
+    depends_on:
+      - broker
     ports:
-      - "5555:5555"
+      - "5555:5555"   # REQ/REP do server
     volumes:
-      - ./server/data:/app/data   # persiste os arquivos JSON no host
+      - ./server/data:/app/data   # persistência de JSON
 
   client:
     build: ./client
     container_name: client
     depends_on:
       - server
+      - broker
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./client/data:/app/data
 
-  bot:
+  # --- Bots Definidos Explicitamente para Nomes Únicos ---
+
+  bot-1:
     build: ./bot
-    container_name: bot
+    container_name: bot-alice
     depends_on:
       - server
+      - broker
+    environment:
+      - BOT_ID=0
+      
+  bot-2:
+    build: ./bot
+    container_name: bot-bob
+    depends_on:
+      - server
+      - broker
+    environment:
+      - BOT_ID=1
+      
+  bot-3:
+    build: ./bot
+    container_name: bot-carla
+    depends_on:
+      - server
+      - broker
+    environment:
+      - BOT_ID=2
