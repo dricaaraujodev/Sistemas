@@ -94,7 +94,8 @@ async function publish(user, channel, message) {
 }
 
 // ============================================================
-// LOOP DE SUBSCRIÇÃO
+// ============================================================
+// LOOP DE SUBSCRIÇÃO (CORRIGIDO)
 // ============================================================
 (async () => {
   for await (const [frame] of sub) {
@@ -103,22 +104,23 @@ async function publish(user, channel, message) {
     if (!topic) continue;
 
     const pl = payload.trim();
-
-    // Anúncio de entrada no canal
-    if (pl.startsWith("🟢") && pl.includes("entrou no canal geral")) {
-      const match = pl.match(/🟢\s*(.*?)\s+entrou no canal geral/);
+    
+    // ANÚNCIO DE ENTRADA [JOIN] (Substitui 🟢)
+    if (pl.startsWith("[JOIN]") && pl.includes("entrou no canal geral")) {
+      const match = pl.match(/\[JOIN\]\s*(.*?)\s+entrou no canal geral/);
       if (match) {
         const joinedUser = match[1];
         if (joinedUser !== BOT_NAME) {
-          console.log(pl);
+          console.log(`🟢 ${joinedUser} entrou no canal geral`); // Mantém o emoji no log se preferir
         }
       }
       continue;
     }
 
-    // Mensagem privada
-    if (topic === BOT_NAME && pl.startsWith("💌")) {
-      const match = pl.match(/💌\s*(.*?)\s+recebeu mensagem privada de\s+(.*?):\s*"(.*)"/);
+    // MENSAGEM PRIVADA [PRV] (Substitui 💌)
+    if (topic === BOT_NAME && pl.startsWith("[PRV]")) {
+      // Regex espera: [PRV] Bob recebeu mensagem privada de Alice: "Oi Bob..."
+      const match = pl.match(/\[PRV\]\s*(.*?)\s+recebeu mensagem privada de\s+(.*?):\s*"(.*)"/);
       if (match) {
         const receiver = match[1];
         const sender = match[2];
@@ -127,31 +129,29 @@ async function publish(user, channel, message) {
           console.log(`💌 ${BOT_NAME} recebeu mensagem privada de ${sender}: "${message}"`);
         }
       } else {
-        console.log(`💌 ${BOT_NAME} recebeu (privado): ${pl}`);
+        console.log(`💌 ${BOT_NAME} recebeu (privado, não formatado): ${pl}`);
       }
       continue;
     }
 
-    // Mensagem pública
-    if (pl.startsWith("💬")) {
-      const m = pl.match(/💬\s*(.*?)\s+enviou ao canal\s+(.*?):\s*"(.*)"/);
+    // MENSAGEM PÚBLICA [PUB] (Substitui 💬)
+    if (pl.startsWith("[PUB]")) {
+      // Regex espera: [PUB] Alice enviou ao canal geral: "Ola, tudo bem com todos no canal?"
+      const m = pl.match(/\[PUB\]\s*(.*?)\s+enviou ao canal geral:\s*"(.*)"/);
       if (m) {
         const sender = m[1];
-        const channel = m[2];
-        const message = m[3];
-        if (sender !== BOT_NAME) {
-          console.log(`${BOT_NAME} recebeu de ${channel}: 💬 "${message}" (de ${sender})`);
-        }
+        const message = m[2];
+        console.log(`💬 ${BOT_NAME} recebeu de geral (de ${sender}): "${message}"`);
       } else {
-        console.log(`📩 ${BOT_NAME} recebeu: ${pl}`);
+        console.log(`📩 ${BOT_NAME} recebeu (PUB não formatada): ${pl}`);
       }
       continue;
     }
 
     // Qualquer outra coisa
     console.log(`📩 ${BOT_NAME} recebeu: ${pl}`);
-  }
-})();
+  } // <-- fecha o for await
+})(); // <-- fecha a função assíncrona
 
 // ============================================================
 // AÇÕES DE DEMONSTRAÇÃO

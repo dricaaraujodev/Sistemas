@@ -21,7 +21,7 @@ pub.connect(PUB_CONNECT)
 print("🧠 Servidor iniciado — REQ/REP em 5555, PUB → broker:5557")
 
 # Estado de usuários e canais
-users = {}      # users[name] = {"online": True/False, "ts": "2025-11-12T14:00:00Z"}
+users = {}       # users[name] = {"online": True/False, "ts": "2025-11-12T14:00:00Z"}
 channels = ["geral"]
 
 def now_iso():
@@ -58,8 +58,8 @@ while True:
         users[user] = {"online": True, "ts": ts}
         print(f"✅ LOGIN: {user}")
 
-        # Envia broadcast de entrada apenas UMA VEZ
-        broadcast("geral", f"🟢 {user} entrou no canal geral")
+        # Envia broadcast de entrada usando prefixo [JOIN]
+        broadcast("geral", f"[JOIN] {user} entrou no canal geral")
 
         rep.send_json({
             "service": "login",
@@ -106,7 +106,8 @@ while True:
             })
             continue
 
-        payload = f"💬 {user} enviou ao canal {channel}: \"{message}\""
+        # Usa prefixo [PUB]
+        payload = f"[PUB] {user} enviou ao canal {channel}: \"{message}\""
         print(f"📢 BROADCAST: {payload}")
         broadcast(channel, payload)
 
@@ -132,23 +133,25 @@ while True:
             continue
 
         if users.get(dst, {}).get("online"):
-            # Primeiro confirma para o remetente que foi entregue
-            rep.send_json({
-            "service": "message",
-            "data": {"status": "DELIVERED", "timestamp": ts}
-        })
-            # Dá um pequeno delay antes de publicar (garante ordem de logs)
-            time.sleep(0.1)
-            pub.send_string(f"{dst}|{payload}")
-            print(f"🔒 ENTREGUE: {src} -> {dst}: \"{message}\"")
+            # 1. Cria o payload no formato esperado pelo bot.js, usando prefixo [PRV]
+            payload_privada = f"[PRV] {dst} recebeu mensagem privada de {src}: \"{message}\""
 
+            # 2. Confirma para o remetente que foi entregue (REP)
+            rep.send_json({
+                "service": "message",
+                "data": {"status": "DELIVERED", "timestamp": ts}
+            })
+
+            # 3. Publica a mensagem no TÓPICO DO DESTINATÁRIO (dst)
+            pub.send_string(f"{dst}|{payload_privada}")
+            print(f"🔒 ENTREGUE: {src} -> {dst}: \"{message}\"")
         else:
             print(f"❌ NÃO ENTREGUE (offline): {src} → {dst}: \"{message}\"")
             rep.send_json({
                 "service": "message",
                 "data": {
                     "status": "OFFLINE",
-                    "message": f"{dst} não está online",
+                    "message": f"{dst} está offline.",
                     "timestamp": ts
                 }
             })
