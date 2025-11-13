@@ -1,5 +1,6 @@
-FROM node:20
+FROM node:20-alpine
 WORKDIR /app
-COPY . .
+COPY package.json .
 RUN npm install
+COPY bot.js .
 CMD ["node", "bot.js"]

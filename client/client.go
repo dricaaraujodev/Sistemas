@@ -1,268 +1,273 @@
 package main
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
+	"log"
+	"math/rand"
 	"os"
-	"strings"
-	"sync"
 	"time"
 
 	zmq "github.com/pebbe/zmq4"
 )
 
-// --- CONFIGURAÇÃO ---
-const (
-	DATA_DIR      = "data"
-	MESSAGES_FILE = "data/messages.json"
-)
-
-// --- ESTRUTURAS ---
-type MessageEntry struct {
-	Type      string `json:"type"`
-	User      string `json:"user,omitempty"`
-	Src       string `json:"src,omitempty"`
-	Dst       string `json:"dst,omitempty"`
-	Channel   string `json:"channel,omitempty"`
-	Message   string `json:"message"`
-	Timestamp string `json:"timestamp"`
-	Raw       string `json:"raw,omitempty"`
+// util timestamp ISO
+func nowISO() string {
+	return time.Now().UTC().Format(time.RFC3339)
 }
 
-// --- VARIÁVEIS GLOBAIS ---
-var (
-	mu       sync.Mutex
-	messages []MessageEntry
-	botID    string
-)
+// helper: envia requisição REQ/REP e recebe resposta JSON decodificada em map
+func sendRequest(req *zmq.Socket, service string, data map[string]interface{}) (map[string]interface{}, error) {
+	body := map[string]interface{}{
+		"service": service,
+		"data":    data,
+	}
+	b, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	if _, err := req.Send(string(b), 0); err != nil {
+		return nil, err
+	}
+	rep, err := req.Recv(0)
+	if err != nil {
+		return nil, err
+	}
 
-// --- FUNÇÕES AUXILIARES ---
-func now() string {
-	return time.Now().Format(time.RFC3339Nano)
+	var resp map[string]interface{}
+	if err := json.Unmarshal([]byte(rep), &resp); err != nil {
+		return nil, fmt.Errorf("erro ao decodificar resposta: %w (raw: %s)", err, rep)
+	}
+	return resp, nil
 }
 
-func ensureDataDir() error {
-	if _, err := os.Stat(DATA_DIR); os.IsNotExist(err) {
-		return os.MkdirAll(DATA_DIR, 0755)
+// extrai slice de strings de possíveis campos (channels/users) suportando variações
+func extractStringListFromData(data map[string]interface{}, keys ...string) []string {
+	for _, k := range keys {
+		if v, ok := data[k]; ok {
+			switch vv := v.(type) {
+			case []interface{}:
+				out := make([]string, 0, len(vv))
+				for _, item := range vv {
+					if s, ok := item.(string); ok {
+						out = append(out, s)
+					}
+				}
+				return out
+			case []string:
+				return vv
+			}
+		}
 	}
 	return nil
 }
 
-func loadMessages() {
-	mu.Lock()
-	defer mu.Unlock()
-	if _, err := os.Stat(MESSAGES_FILE); os.IsNotExist(err) {
-		messages = []MessageEntry{}
-		return
-	}
-	f, err := os.Open(MESSAGES_FILE)
-	if err != nil {
-		fmt.Println("⚠️ Erro ao abrir messages.json:", err)
-		messages = []MessageEntry{}
-		return
-	}
-	defer f.Close()
-	if err := json.NewDecoder(f).Decode(&messages); err != nil {
-		fmt.Println("⚠️ Arquivo messages.json inválido, criando novo.")
-		messages = []MessageEntry{}
-	}
-}
-
-func saveMessages() {
-	mu.Lock()
-	defer mu.Unlock()
-	tmp := MESSAGES_FILE + ".tmp"
-	f, err := os.Create(tmp)
-	if err != nil {
-		fmt.Println("⚠️ Erro ao criar arquivo temporário:", err)
-		return
-	}
-	json.NewEncoder(f).Encode(messages)
-	f.Close()
-	os.Rename(tmp, MESSAGES_FILE)
-}
-
-func appendMessage(m MessageEntry) {
-	mu.Lock()
-	messages = append(messages, m)
-	mu.Unlock()
-	saveMessages()
-}
-
-// --- ENVIO REQ/REP ---
-func sendReq(socket *zmq.Socket, service string, data map[string]interface{}) (map[string]interface{}, error) {
-	msg := map[string]interface{}{
-		"service": service,
-		"data":    data,
-	}
-	b, _ := json.Marshal(msg)
-	if _, err := socket.SendBytes(b, 0); err != nil {
-		return nil, err
-	}
-	replyBytes, err := socket.RecvBytes(0)
-	if err != nil {
-		return nil, err
-	}
-	var rep map[string]interface{}
-	if err := json.Unmarshal(replyBytes, &rep); err != nil {
-		return nil, err
-	}
-	return rep, nil
-}
-
-// --- RECEBIMENTO (SUB) ---
-func parseAndStoreIncoming(topic, payload, self string) {
-	ts := now()
-	raw := fmt.Sprintf("%s|%s", topic, payload)
-
-	if topic == self {
-		// mensagem privada recebida
-		idx := strings.Index(payload, "enviou mensagem privada:")
-		if idx >= 0 {
-			src := strings.TrimSpace(strings.TrimPrefix(payload[:idx], "🔒"))
-			msgPart := strings.TrimSpace(payload[idx+len("enviou mensagem privada:"):])
-			appendMessage(MessageEntry{"private", "", src, self, "", msgPart, ts, raw})
-			fmt.Printf("\n💌 %s recebeu mensagem privada de %s: \"%s\"\n", self, src, msgPart)
-			return
-		}
-		appendMessage(MessageEntry{"private", "", "", self, "", payload, ts, raw})
-		fmt.Printf("\n💌 %s recebeu (privado): \"%s\"\n", self, payload)
-		return
-	}
-
-	// mensagem de canal
-	idx := strings.Index(payload, ":")
-	if idx >= 0 {
-		left := strings.TrimSpace(payload[:idx])
-		msgPart := strings.TrimSpace(payload[idx+1:])
-		user := strings.Fields(left)[0]
-		appendMessage(MessageEntry{"channel", user, "", "", topic, msgPart, ts, raw})
-		fmt.Printf("\n💬 [%s] %s: \"%s\"\n", topic, user, msgPart)
-	} else {
-		appendMessage(MessageEntry{"channel", "", "", "", topic, payload, ts, raw})
-		fmt.Printf("\n💬 [%s] %s\n", topic, payload)
-	}
-}
-
-func subscriberLoop(sub *zmq.Socket, self string) {
-	for {
-		msgBytes, err := sub.RecvMessageBytes(0)
-		if err != nil {
-			fmt.Println("⚠️ Erro no SUB:", err)
-			time.Sleep(500 * time.Millisecond)
-			continue
-		}
-		var topic, payload string
-		if len(msgBytes) == 1 {
-			text := string(msgBytes[0])
-			idx := strings.Index(text, "|")
-			if idx >= 0 {
-				topic, payload = text[:idx], text[idx+1:]
-			} else {
-				continue
-			}
-		} else if len(msgBytes) >= 2 {
-			topic, payload = string(msgBytes[0]), string(msgBytes[1])
-		}
-		parseAndStoreIncoming(topic, payload, self)
-	}
-}
-
-// --- MAIN ---
 func main() {
-	if err := ensureDataDir(); err != nil {
-		fmt.Println("❌ Erro criando pasta data:", err)
-		return
-	}
-	loadMessages()
+	rand.Seed(time.Now().UnixNano())
 
-	req, _ := zmq.NewSocket(zmq.REQ)
+	serverHost := os.Getenv("SERVER_HOST")
+	if serverHost == "" {
+		serverHost = "server"
+	}
+
+	// cria socket REQ
+	req, err := zmq.NewSocket(zmq.REQ)
+	if err != nil {
+		log.Fatalf("erro ao criar socket REQ: %v", err)
+	}
 	defer req.Close()
-	req.Connect("tcp://server:5555")
 
-	sub, _ := zmq.NewSocket(zmq.SUB)
-	defer sub.Close()
-	sub.Connect("tcp://proxy:5558")
-
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Digite seu nome: ")
-	nameRaw, _ := reader.ReadString('\n')
-	username := strings.TrimSpace(nameRaw)
-	if username == "" {
-		fmt.Println("❌ Nome inválido.")
-		return
+	addr := fmt.Sprintf("tcp://%s:5555", serverHost)
+	if err := req.Connect(addr); err != nil {
+		log.Fatalf("erro ao conectar ao servidor %s: %v", addr, err)
 	}
-	botID = username // ID fixo
+	fmt.Println("Go client connected to server:", serverHost)
 
-	fmt.Printf("🟢 %s entrou no sistema.\n", botID)
+	// 1) Tenta login/registro (tenta "register" -> "login")
+	user := fmt.Sprintf("go_client_%d", rand.Intn(1_000_000))
+	fmt.Printf("Cliente escolhido: %s\n", user)
 
-	// login
-	if _, err := sendReq(req, "login", map[string]interface{}{"user": botID, "timestamp": now()}); err != nil {
-		fmt.Println("❌ Erro no login:", err)
-		return
+	// função auxiliar para tratar resposta de login
+	handleLoginResponse := func(resp map[string]interface{}) (bool, string) {
+		if resp == nil {
+			return false, "resposta vazia"
+		}
+		if d, ok := resp["data"].(map[string]interface{}); ok {
+			// status pode ser "sucesso", "OK", "ok"
+			if st, ok := d["status"].(string); ok {
+				if st == "sucesso" || st == "OK" || st == "ok" {
+					return true, ""
+				}
+				return false, st
+			}
+			// às vezes servidor usa outro campo — considerar sucesso
+			return true, ""
+		}
+		return false, "campo data ausente"
 	}
 
-	// subscrever canais
-	sub.SetSubscribe(botID) // privado
-	if rep2, err := sendReq(req, "channels", map[string]interface{}{"timestamp": now()}); err == nil {
-		if data, ok := rep2["data"].(map[string]interface{}); ok {
-			if chs, ok2 := data["channels"].([]interface{}); ok2 {
-				for _, c := range chs {
-					if cs, ok3 := c.(string); ok3 {
-						sub.SetSubscribe(cs)
-						fmt.Printf("📡 %s entrou no canal %s\n", botID, cs)
-					}
+	// primeiro: try register (alguns servidores usam register)
+	if resp, err := sendRequest(req, "register", map[string]interface{}{"user": user, "timestamp": nowISO()}); err == nil {
+		ok, msg := handleLoginResponse(resp)
+		if ok {
+			fmt.Println("Registro realizado com sucesso (register).")
+		} else {
+			fmt.Printf("Register retornou: %s — tentando login...\n", msg)
+			// tenta login em seguida
+			if resp2, err2 := sendRequest(req, "login", map[string]interface{}{"user": user, "timestamp": nowISO()}); err2 == nil {
+				if ok2, msg2 := handleLoginResponse(resp2); ok2 {
+					fmt.Println("Login realizado com sucesso (login).")
+				} else {
+					log.Fatalf("login/register falharam: %s", msg2)
+				}
+			} else {
+				log.Fatalf("erro ao tentar login: %v", err2)
+			}
+		}
+	} else {
+		// register deu erro — tenta login direto
+		fmt.Printf("register erro: %v — tentando login...\n", err)
+		if resp2, err2 := sendRequest(req, "login", map[string]interface{}{"user": user, "timestamp": nowISO()}); err2 == nil {
+			if ok2, msg2 := handleLoginResponse(resp2); ok2 {
+				fmt.Println("Login realizado com sucesso (login).")
+			} else {
+				// Se login tbm falhar, abortamos com log
+				log.Fatalf("login falhou: %s", msg2)
+			}
+		} else {
+			log.Fatalf("erro ao tentar login: %v", err2)
+		}
+	}
+
+	// 2) solicita lista de canais — usa EXPLICITAMENTE "channels" e data.channels
+	var channels []string
+	{
+		resp, err := sendRequest(req, "channels", map[string]interface{}{"timestamp": nowISO()})
+		if err != nil {
+			fmt.Println("Erro ao solicitar canais:", err)
+		} else {
+			if d, ok := resp["data"].(map[string]interface{}); ok {
+				// preferimos data.channels (correto conforme servidor ajustado)
+				if chs := extractStringListFromData(d, "channels"); len(chs) > 0 {
+					channels = chs
+					fmt.Println("Canais obtidos (channels):", channels)
+				} else if chs := extractStringListFromData(d, "users"); len(chs) > 0 {
+					// compatibilidade adicional caso servidor retorne 'users' por engano
+					channels = chs
+					fmt.Println("Canais obtidos (users):", channels)
 				}
 			}
 		}
 	}
 
-	go subscriberLoop(sub, botID)
+	// se ainda vazio, usa fallback sensato que existe no servidor por padrão
+	if len(channels) == 0 {
+		channels = []string{"geral", "dev", "random", "announcements"}
+		fmt.Println("Nenhum canal retornado pelo servidor — usando fallback:", channels)
+	}
 
-	fmt.Println("💬 Use '@dest mensagem' para privado ou 'canal mensagem' para canal.")
+	// 3) solicita lista de usuários (opcional, útil para PM)
+	if resp, err := sendRequest(req, "users", map[string]interface{}{"timestamp": nowISO()}); err == nil {
+		if d, ok := resp["data"].(map[string]interface{}); ok {
+			users := extractStringListFromData(d, "users")
+			if len(users) > 0 {
+				fmt.Println("Usuários cadastrados:", users)
+			}
+		}
+	} else {
+		fmt.Println("Solicitação de users falhou (não crítica):", err)
+	}
+
+	// 4) fetch offline (se suportado pelo servidor)
+	if resp, err := sendRequest(req, "fetch_offline", map[string]interface{}{"user": user}); err == nil {
+		if d, ok := resp["data"].(map[string]interface{}); ok {
+			if msgsAny, ok := d["messages"].([]interface{}); ok && len(msgsAny) > 0 {
+				fmt.Printf("Recebeu %d mensagens offline:\n", len(msgsAny))
+				for _, mi := range msgsAny {
+					if m, ok := mi.(map[string]interface{}); ok {
+						fmt.Printf("  de=%v msg=%v ts=%v\n", m["src"], m["message"], m["timestamp"])
+					}
+				}
+			}
+		}
+	} else {
+		// não é fatal se servidor não implementar
+		fmt.Println("fetch_offline não disponível ou falhou (não crítico):", err)
+	}
+
+	// 5) Loop principal: escolher canal aleatório e enviar 10 mensagens
+	fmt.Println("Entrando no loop de envio: escolher canal aleatório -> enviar 10 msgs -> repetir")
+
 	for {
-		fmt.Print("> ")
-		line, _ := reader.ReadString('\n')
-		line = strings.TrimSpace(line)
-		if line == "" {
-			continue
+		ch := channels[rand.Intn(len(channels))]
+		for i := 1; i <= 10; i++ {
+			msgText := fmt.Sprintf("mensagem %d do %s para canal %s", i, user, ch)
+			resp, err := sendRequest(req, "publish", map[string]interface{}{
+				"user":      user,
+				"channel":   ch,
+				"message":   msgText,
+				"timestamp": nowISO(),
+			})
+			if err != nil {
+				fmt.Printf("[publish] erro: %v\n", err)
+			} else {
+				// tenta extrair status amigável
+				status := "unknown"
+				if d, ok := resp["data"].(map[string]interface{}); ok {
+					if s, ok := d["status"].(string); ok {
+						status = s
+					} else if s, ok := d["status"].(interface{}); ok {
+						// caso servidor use booleano ou outro formato
+						status = fmt.Sprintf("%v", s)
+					}
+					if m, ok := d["description"].(string); ok && status != "OK" {
+						fmt.Printf("[publish] canal=%s user=%s resp_status=%s desc=%s\n", ch, user, status, m)
+					}
+				}
+				if status == "OK" || status == "sucesso" || status == "ok" {
+					fmt.Printf("📢 [%s] %s: \"%s\"\n", ch, user, msgText)
+				} else {
+					fmt.Printf("⚠️ publish canal=%s retornou status=%s\n", ch, status)
+				}
+			}
+			time.Sleep(300 * time.Millisecond)
 		}
 
-		if strings.HasPrefix(line, "@") {
-			// mensagem privada
-			parts := strings.Fields(line)
-			if len(parts) < 2 {
-				fmt.Println("❗ Use: @dest mensagem")
-				continue
+		// opcional: envia uma private message para usuário aleatório
+		if resp, err := sendRequest(req, "users", map[string]interface{}{"timestamp": nowISO()}); err == nil {
+			if d, ok := resp["data"].(map[string]interface{}); ok {
+				users := extractStringListFromData(d, "users")
+				if len(users) > 1 {
+					// escolhe destinatário diferente de si mesmo
+					var dst string
+					for {
+						cand := users[rand.Intn(len(users))]
+						if cand != user {
+							dst = cand
+							break
+						}
+					}
+					pmText := fmt.Sprintf("oi %s, sou %s — teste pm", dst, user)
+					if resp2, err2 := sendRequest(req, "message", map[string]interface{}{
+						"src":       user,
+						"dst":       dst,
+						"message":   pmText,
+						"timestamp": nowISO(),
+					}); err2 == nil {
+						st := "unknown"
+						if d2, ok := resp2["data"].(map[string]interface{}); ok {
+							if s, ok := d2["status"].(string); ok {
+								st = s
+							}
+						}
+						fmt.Printf("🔐 PV %s -> %s resposta=%s\n", user, dst, st)
+					} else {
+						fmt.Println("erro ao enviar PM (não crítico):", err2)
+					}
+				}
 			}
-			dst := strings.TrimPrefix(parts[0], "@")
-			msg := strings.Join(parts[1:], " ")
-			sendReq(req, "message", map[string]interface{}{
-				"src":       botID,
-				"dst":       dst,
-				"message":   msg,
-				"timestamp": now(),
-			})
-			appendMessage(MessageEntry{"sent_private", "", botID, dst, "", msg, now(), ""})
-			fmt.Printf("🔒 %s enviou mensagem privada para %s: \"%s\"\n", botID, dst, msg)
-		} else {
-			// mensagem em canal
-			parts := strings.Fields(line)
-			if len(parts) < 2 {
-				fmt.Println("❗ Use: canal mensagem")
-				continue
-			}
-			channel := parts[0]
-			msg := strings.Join(parts[1:], " ")
-			sendReq(req, "publish", map[string]interface{}{
-				"user":      botID,
-				"channel":   channel,
-				"message":   msg,
-				"timestamp": now(),
-			})
-			appendMessage(MessageEntry{"sent_channel", botID, "", "", channel, msg, now(), ""})
-			fmt.Printf("💬 %s enviou ao canal %s: \"%s\"\n", botID, channel, msg)
 		}
+
+		time.Sleep(2 * time.Second)
 	}
 }

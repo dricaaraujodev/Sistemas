@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PubSub Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 8px; }
+    .box { border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; border-radius:6px; }
+    .mono { font-family: monospace; font-size: 13px; color:#333; }
+  </style>
+</head>
+<body>
+  <h1>Pub/Sub Dashboard</h1>
+  <div id="content">Carregando...</div>
+
+  <script>
+    async function load() {
+      try {
+        let r = await fetch('/api/status');
+        let j = await r.json();
+        const el = document.getElementById('content');
+        let html = '';
+        html += '<div class="box"><strong>Canais disponíveis:</strong> ' + j.channels.join(', ') + '</div>';
+        html += '<div class="box"><strong>Usuários online:</strong> ' + (j.users_online.length) + '</div>';
+        html += '<div class="box"><strong>Últimas mensagens:</strong><div class="mono">';
+        j.last_messages.slice().reverse().forEach(m => {
+          if (m.type === 'channel_message') {
+            html += '[' + m.timestamp + '] #' + m.channel + ' ' + m.user + ': ' + m.message + '<br>';
+          } else {
+            html += '[' + m.timestamp + '] (privado) ' + m.src + ' → ' + m.dst + ': ' + m.message + '<br>';
+          }
+        });
+        html += '</div></div>';
+        el.innerHTML = html;
+      } catch (e) {
+        document.getElementById('content').innerText = 'Erro: ' + e;
+      }
+    }
+    load();
+    setInterval(load, 3000);
+  </script>
+</body>
+</html>

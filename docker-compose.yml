@@ -1,59 +1,36 @@
-version: "3.9"
-
 services:
-  broker:
-    build: ./broker
-    container_name: broker
+
+  proxy:
+    build: ./proxy
     ports:
-      - "5557:5557"   # XSUB do broker
-      - "5558:5558"   # XPUB do broker
+      - "5557:5557"
+      - "5558:5558"
 
   server:
     build: ./server
-    container_name: server
-    depends_on:
-      - broker
-    ports:
-      - "5555:5555"   # REQ/REP do server
     volumes:
-      - ./server/data:/app/data   # persistência de JSON
+      - ./server/data:/app/data
+    ports:
+      - "5555:5555"
+      - "8090:8080"
+    depends_on:
+      - proxy
+
+  bot:
+    build: ./bot
+    depends_on:
+      - server
+      - proxy
+    environment:
+      - PROXY_HOST=proxy
+      - SERVER_HOST=server
+    # scale when running: docker compose up --build --scale bot=20
+    restart: unless-stopped
 
   client:
     build: ./client
-    container_name: client
     depends_on:
       - server
-      - broker
-    stdin_open: true
-    tty: true
-    volumes:
-      - ./client/data:/app/data
-
-  # --- Bots Definidos Explicitamente para Nomes Únicos ---
-
-  bot-1:
-    build: ./bot
-    container_name: bot-alice
-    depends_on:
-      - server
-      - broker
     environment:
-      - BOT_ID=0
-      
-  bot-2:
-    build: ./bot
-    container_name: bot-bob
-    depends_on:
-      - server
-      - broker
-    environment:
-      - BOT_ID=1
-      
-  bot-3:
-    build: ./bot
-    container_name: bot-carla
-    depends_on:
-      - server
-      - broker
-    environment:
-      - BOT_ID=2
+      - SERVER_HOST=server
+    restart: unless-stopped

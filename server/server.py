@@ -1,199 +1,258 @@
 import zmq
 import json
 import os
-from datetime import datetime, timedelta
+import threading
+from datetime import datetime
+from flask import Flask, render_template, jsonify
 
-DATA_DIR = "data"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
 os.makedirs(DATA_DIR, exist_ok=True)
 
-REQ_BIND = "tcp://0.0.0.0:5555"
-PUB_CONNECT = "tcp://broker:5557"
+USERS_FILE = os.path.join(DATA_DIR, "users.json")
+CHANNELS_FILE = os.path.join(DATA_DIR, "channels.json")
+MESSAGES_FILE = os.path.join(DATA_DIR, "messages.json")
+OFFLINE_FILE = os.path.join(DATA_DIR, "messages-offline.json")
 
-context = zmq.Context()
-rep = context.socket(zmq.REP)
-rep.bind(REQ_BIND)
+def load_json(path, default):
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return default
+    return default
 
-pub = context.socket(zmq.PUB)
-pub.connect(PUB_CONNECT)
+def save_json(path, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
-print("🧠 Servidor iniciado — REQ/REP em 5555, PUB → broker:5557")
+# Banco de dados
+users = load_json(USERS_FILE, {})                  # { username: { online: True, last_seen: ... } }
+channels = load_json(CHANNELS_FILE, ["geral", "dev", "random", "announcements"])
+messages = load_json(MESSAGES_FILE, [])            # todas as mensagens publicadas
+offline = load_json(OFFLINE_FILE, [])              # mensagens privadas offline
 
-# =========================================================
-# ESTRUTURAS DE DADOS
-# =========================================================
-users = {}  # { "Ana": {"online": True, "ts": "..."} }
-channels = ["geral"]
-offline_messages = {}  # { "Ana": [("Bruno", "Oi", timestamp), ...] }
+# ZMQ sockets
+ctx = zmq.Context()
 
-# =========================================================
-# FUNÇÕES AUXILIARES
-# =========================================================
-def now_iso():
+rep = ctx.socket(zmq.REQ)
+rep = ctx.socket(zmq.REP)
+rep.bind("tcp://0.0.0.0:5555")
+
+pub = ctx.socket(zmq.PUB)
+pub.connect("tcp://proxy:5557")
+
+def ts():
     return datetime.utcnow().isoformat()
 
-def broadcast(channel, message):
-    """Envia mensagem pública a todos os inscritos no canal."""
-    pub.send_string(f"{channel}|{message}")
+def persist_all():
+    save_json(USERS_FILE, users)
+    save_json(CHANNELS_FILE, channels)
+    save_json(MESSAGES_FILE, messages)
+    save_json(OFFLINE_FILE, offline)
 
-def store_offline_message(dst, src, message):
-    """Armazena mensagens destinadas a usuários offline."""
-    if dst not in offline_messages:
-        offline_messages[dst] = []
-    offline_messages[dst].append({
-        "src": src,
-        "message": message,
-        "timestamp": now_iso()
+# Dashboard
+app = Flask(__name__, static_folder=os.path.join(BASE_DIR, "static"), template_folder=os.path.join(BASE_DIR, "templates"))
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/api/status")
+def api_status():
+    return jsonify({
+        "channels": channels,
+        "users_online": [u for u,info in users.items() if info.get("online")],
+        "last_messages": messages[-50:],
+        "offline": offline
     })
 
-def deliver_offline_messages(user):
-    """Entrega mensagens armazenadas para o usuário quando ele faz login."""
-    msgs = offline_messages.pop(user, [])
-    for m in msgs:
-        payload = f"[OFFLINE MSG] {user} recebeu (de {m['src']}): \"{m['message']}\""
-        pub.send_string(f"{user}|{payload}")
-        print(f"📨 Entregue mensagem offline → {user}: \"{m['message']}\"")
+def run_flask():
+    app.run(host="0.0.0.0", port=8080, debug=False)
 
-# =========================================================
-# LOOP PRINCIPAL
-# =========================================================
+t = threading.Thread(target=run_flask, daemon=True)
+t.start()
+
+print("Server ready: REQ/REP 5555 | PUB → proxy:5557 | Dashboard :8080")
+
+# ---------------------------
+#  MAIN LOOP - Request / Reply
+# ---------------------------
 while True:
     try:
-        req_msg = rep.recv_json()
-    except Exception as e:
-        print(f"❌ Erro ao receber JSON: {e}")
+        raw = rep.recv_string()
+        req = json.loads(raw)
+    except:
+        rep.send_json({"service": "error", "data": {"message": "invalid request"}})
         continue
 
-    service = req_msg.get("service")
-    data = req_msg.get("data", {})
-    ts = now_iso()
+    service = req.get("service")
+    data = req.get("data", {})
 
-    # =========================================================
+    # --------------------------------------
     # LOGIN
-    # =========================================================
+    # --------------------------------------
     if service == "login":
         user = data.get("user")
-
-        if not user or not user.strip():
-            error_msg = "Usuário não informado ou inválido"
-            print(f"❌ LOGIN FALHOU: {error_msg}")
-            rep.send_json({
-                "service": "login",
-                "data": {"status": "ERRO", "message": error_msg, "timestamp": ts}
-            })
+        if not user:
+            rep.send_json({"service":"login","data":{
+                "status": "erro",
+                "description": "missing user",
+                "timestamp": ts()
+            }})
             continue
 
-        users[user] = {"online": True, "ts": ts}
-        print(f"✅ LOGIN: {user} entrou às {ts}")
+        users.setdefault(user, {})
+        users[user]["online"] = True
+        users[user]["last_seen"] = ts()
+        persist_all()
 
-        broadcast("geral", f"[JOIN] {user} entrou no canal geral")
+        rep.send_json({"service":"login","data":{
+            "status": "sucesso",
+            "timestamp": ts()
+        }})
 
-        # Entregar mensagens offline, se existirem
-        deliver_offline_messages(user)
-
-        rep.send_json({
-            "service": "login",
-            "data": {"status": "OK", "message": f"Login de {user} realizado com sucesso!", "timestamp": ts}
-        })
-        continue
-
-    # =========================================================
-    # LISTAR CANAIS
-    # =========================================================
-    if service == "channels":
-        rep.send_json({
-            "service": "channels",
-            "data": {"channels": channels, "timestamp": ts}
-        })
-        continue
-
-    # =========================================================
-    # LISTAR USUÁRIOS
-    # =========================================================
-    if service == "users":
+    # --------------------------------------
+    # LISTA DE USUÁRIOS
+    # --------------------------------------
+    elif service == "users":
         rep.send_json({
             "service": "users",
-            "data": {"users": list(users.keys()), "timestamp": ts}
+            "data": {
+                "timestamp": ts(),
+                "users": list(users.keys())
+            }
         })
-        continue
 
-    # =========================================================
-    # MENSAGEM PÚBLICA
-    # =========================================================
-    if service == "publish":
+    # --------------------------------------
+    # CRIAR CANAL
+    # --------------------------------------
+    elif service == "channel":
+        ch = data.get("channel")
+        if not ch:
+            rep.send_json({"service":"channel","data":{
+                "status": "erro",
+                "description": "missing channel",
+                "timestamp": ts()
+            }})
+            continue
+
+        if ch in channels:
+            rep.send_json({"service":"channel","data":{
+                "status": "erro",
+                "description": "canal já existe",
+                "timestamp": ts()
+            }})
+        else:
+            channels.append(ch)
+            persist_all()
+            rep.send_json({"service":"channel","data":{
+                "status": "sucesso",
+                "timestamp": ts()
+            }})
+
+    # --------------------------------------
+    # LISTA DE CANAIS
+    # --------------------------------------
+    elif service == "channels":
+        rep.send_json({
+            "service": "channels",
+            "data": {
+                "timestamp": ts(),
+                "channels": channels
+            }
+        })
+
+    # --------------------------------------
+    # PUBLICAÇÃO EM CANAL
+    # --------------------------------------
+    elif service == "publish":
         user = data.get("user")
-        channel = data.get("channel", "geral")
-        message = data.get("message")
+        channel = data.get("channel")
+        msg = data.get("message")
 
         if channel not in channels:
-            rep.send_json({
-                "service": "publish",
-                "data": {"status": "ERRO", "message": f"Canal {channel} não existe", "timestamp": ts}
-            })
+            rep.send_json({"service":"publish","data":{
+                "status": "erro",
+                "message":"canal inexistente",
+                "timestamp": ts()
+            }})
             continue
 
-        payload = f"[PUB] {user}: \"{message}\""
-        broadcast(channel, payload)
-        print(f"📢 {user} → {channel}: {message}")
+        payload = {
+            "type": "channel_message",
+            "user": user,
+            "channel": channel,
+            "message": msg,
+            "timestamp": ts()
+        }
 
-        rep.send_json({
-            "service": "publish",
-            "data": {"status": "OK", "message": "Mensagem pública enviada", "timestamp": ts}
-        })
-        continue
+        messages.append(payload)
+        persist_all()
 
-    # =========================================================
+        pub.send_string(channel, zmq.SNDMORE)
+        pub.send_json(payload)
+
+        rep.send_json({"service":"publish","data":{
+            "status":"OK",
+            "timestamp": ts()
+        }})
+
+    # --------------------------------------
     # MENSAGEM PRIVADA
-    # =========================================================
-    if service == "message":
+    # --------------------------------------
+    elif service == "message":
         src = data.get("src")
         dst = data.get("dst")
-        message = data.get("message")
+        msg = data.get("message")
 
-        if not dst:
-            rep.send_json({
-                "service": "message",
-                "data": {"status": "ERRO", "message": "Destinatário não informado", "timestamp": ts}
-            })
-            continue
+        payload = {
+            "type": "private_message",
+            "src": src,
+            "dst": dst,
+            "message": msg,
+            "timestamp": ts()
+        }
 
-        if users.get(dst, {}).get("online"):
-            payload = f"[PRV] {src} → {dst}: \"{message}\""
-            pub.send_string(f"{dst}|{payload}")
-            print(f"🔒 PRIVADA ENTREGUE: {src} → {dst}: {message}")
+        messages.append(payload)
 
-            rep.send_json({
-                "service": "message",
-                "data": {"status": "DELIVERED", "message": f"Mensagem enviada a {dst}", "timestamp": ts}
-            })
+        if dst in users and users.get(dst, {}).get("online"):
+            persist_all()
+            pub.send_string(dst, zmq.SNDMORE)
+            pub.send_json(payload)
+
+            rep.send_json({"service":"message","data":{
+                "status":"OK",
+                "timestamp": ts()
+            }})
         else:
-            print(f"💤 {dst} está offline — armazenando mensagem de {src}")
-            store_offline_message(dst, src, message)
-            rep.send_json({
-                "service": "message",
-                "data": {"status": "STORED", "message": f"{dst} offline — mensagem armazenada", "timestamp": ts}
-            })
-        continue
+            offline.append(payload)
+            persist_all()
+            rep.send_json({"service":"message","data":{
+                "status":"erro",
+                "message":"destinatario offline, mensagem armazenada",
+                "timestamp": ts()
+            }})
 
-    # =========================================================
-    # LOGOUT
-    # =========================================================
-    if service == "logout":
+    # --------------------------------------
+    # FETCH OFFLINE
+    # --------------------------------------
+    elif service == "fetch_offline":
         user = data.get("user")
-        if user in users:
-            users[user]["online"] = False
-            print(f"👋 LOGOUT: {user} saiu.")
-            broadcast("geral", f"[LEFT] {user} saiu do chat.")
-        rep.send_json({
-            "service": "logout",
-            "data": {"status": "OK", "timestamp": ts}
-        })
-        continue
 
-    # =========================================================
-    # SERVIÇO DESCONHECIDO
-    # =========================================================
-    print(f"⚠️ Serviço desconhecido: {service}")
-    rep.send_json({
-        "service": "error",
-        "data": {"status": "UNKNOWN_SERVICE", "timestamp": ts}
-    })
+        inbox = [m for m in offline if m["dst"] == user]
+        offline = [m for m in offline if m["dst"] != user]
+
+        save_json(OFFLINE_FILE, offline)
+
+        rep.send_json({"service":"fetch_offline","data":{
+            "messages": inbox,
+            "timestamp": ts()
+        }})
+
+    else:
+        rep.send_json({"service":"error","data":{
+            "message":"unknown service",
+            "timestamp": ts()
+        }})

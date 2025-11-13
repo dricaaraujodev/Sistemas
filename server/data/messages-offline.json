@@ -1,0 +1,30 @@
+[
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Bruno",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:00:14"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Bruno",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:01:13"
+  },
+  {
+    "type": "private_message",
+    "src": "Eduardo",
+    "dst": "Diana",
+    "message": "rs rs interessante",
+    "timestamp": "2025-11-13 18:10:23"
+  },
+  {
+    "type": "private_message",
+    "src": "Eduardo",
+    "dst": "Marcos",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:10:45"
+  }
+]

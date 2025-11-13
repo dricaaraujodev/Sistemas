@@ -1,0 +1,3853 @@
+[
+  {
+    "type": "register",
+    "user": "go_client_677271",
+    "ts": 1763017190.631417
+  },
+  {
+    "type": "register",
+    "user": "go_client_56227",
+    "ts": 1763017190.6338992
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 1 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:50Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 1 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:50Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 2 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:51Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 2 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:51Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 3 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:51Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 3 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:51Z"
+  },
+  {
+    "type": "register",
+    "user": "3f41aca502c3_cd4rnm",
+    "ts": 1763017191.638324
+  },
+  {
+    "type": "register",
+    "user": "e258ed9d8e0b_uxf4r8",
+    "ts": 1763017191.64694
+  },
+  {
+    "type": "register",
+    "user": "43dba47d9382_3a15rf",
+    "ts": 1763017191.6498084
+  },
+  {
+    "type": "register",
+    "user": "a971ec9ada06_pfpv9y",
+    "ts": 1763017191.6545541
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 4 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:51Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 4 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:51Z"
+  },
+  {
+    "type": "register",
+    "user": "1694c6a75e35_t3pcdy",
+    "ts": 1763017191.916839
+  },
+  {
+    "type": "register",
+    "user": "d1145c60e83b_69k5wz",
+    "ts": 1763017192.2455263
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 5 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:52Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 5 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:52Z"
+  },
+  {
+    "type": "register",
+    "user": "41366b20890c_e97ywq",
+    "ts": 1763017192.5419366
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 6 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:52Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 6 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:52Z"
+  },
+  {
+    "type": "register",
+    "user": "0ac4d24d9306_5bu2im",
+    "ts": 1763017192.780694
+  },
+  {
+    "type": "register",
+    "user": "010f09d55e35_mrr423",
+    "ts": 1763017193.0529692
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 7 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:53Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 7 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:53Z"
+  },
+  {
+    "type": "register",
+    "user": "84cb4955a2be_rhrs83",
+    "ts": 1763017193.2862322
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 8 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:53Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 8 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:53Z"
+  },
+  {
+    "type": "register",
+    "user": "4eaff7d7bd46_k8j1qa",
+    "ts": 1763017193.6039932
+  },
+  {
+    "type": "register",
+    "user": "5f9d6e95e1c6_2z935p",
+    "ts": 1763017193.8277788
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 9 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:53Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 9 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:53Z"
+  },
+  {
+    "type": "register",
+    "user": "8fb4d90193d7_p0we3w",
+    "ts": 1763017194.138786
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_56227",
+    "message": "mensagem 10 do go_client_56227 para canal dev",
+    "timestamp": "2025-11-13T06:59:54Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_677271",
+    "message": "mensagem 10 do go_client_677271 para canal geral",
+    "timestamp": "2025-11-13T06:59:54Z"
+  },
+  {
+    "type": "register",
+    "user": "0776a9614b64_mvp8cc",
+    "ts": 1763017194.4218743
+  },
+  {
+    "type": "register",
+    "user": "188568d309ad_vdtgzh",
+    "ts": 1763017194.7584298
+  },
+  {
+    "type": "register",
+    "user": "826bb0257c31_jwta5p",
+    "ts": 1763017195.027137
+  },
+  {
+    "type": "register",
+    "user": "a92f7775c930_fvogug",
+    "ts": 1763017195.2920694
+  },
+  {
+    "type": "register",
+    "user": "941af09c9e52_kqyonh",
+    "ts": 1763017195.5179758
+  },
+  {
+    "type": "register",
+    "user": "61c73770cf6b_q4c5j2",
+    "ts": 1763017195.7570338
+  },
+  {
+    "type": "register",
+    "user": "f2d452df4fe6_al3pnk",
+    "ts": 1763017195.9378755
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 1 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T06:59:57Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 1 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T06:59:57Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 2 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T06:59:58Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 2 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T06:59:58Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 3 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T06:59:58Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 3 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T06:59:58Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 4 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T06:59:58Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 4 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T06:59:58Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 5 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T06:59:59Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 5 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T06:59:59Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 6 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T06:59:59Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 6 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T06:59:59Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 7 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T07:00:00Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 7 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T07:00:00Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 8 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T07:00:00Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 8 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T07:00:00Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_56227",
+    "message": "mensagem 9 do go_client_56227 para canal geral",
+    "timestamp": "2025-11-13T07:00:00Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "dev",
+    "user": "go_client_677271",
+    "message": "mensagem 9 do go_client_677271 para canal dev",
+    "timestamp": "2025-11-13T07:00:00Z"
+  },
+  {
+    "type": "register",
+    "user": "e258ed9d8e0b_fl7p0j",
+    "ts": 1763017326.260681
+  },
+  {
+    "type": "register",
+    "user": "go_client_711725",
+    "ts": 1763017326.3007812
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 1 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:06Z"
+  },
+  {
+    "type": "register",
+    "user": "go_client_194332",
+    "ts": 1763017326.6776063
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 1 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:06Z"
+  },
+  {
+    "type": "register",
+    "user": "a971ec9ada06_tpow89",
+    "ts": 1763017326.697331
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 2 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:06Z"
+  },
+  {
+    "type": "register",
+    "user": "3f41aca502c3_513my3",
+    "ts": 1763017326.933147
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 2 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:07Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 3 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:07Z"
+  },
+  {
+    "type": "register",
+    "user": "43dba47d9382_0867kc",
+    "ts": 1763017327.173393
+  },
+  {
+    "type": "register",
+    "user": "1694c6a75e35_d8fb5w",
+    "ts": 1763017327.4541745
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 3 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:07Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 4 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:07Z"
+  },
+  {
+    "type": "register",
+    "user": "d1145c60e83b_se6ylt",
+    "ts": 1763017327.7142105
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 4 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:07Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 5 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:07Z"
+  },
+  {
+    "type": "register",
+    "user": "41366b20890c_ac0m9d",
+    "ts": 1763017327.9539828
+  },
+  {
+    "type": "register",
+    "user": "0ac4d24d9306_azza5k",
+    "ts": 1763017328.2236598
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 5 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:08Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 6 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:08Z"
+  },
+  {
+    "type": "register",
+    "user": "010f09d55e35_4ynsol",
+    "ts": 1763017328.4531844
+  },
+  {
+    "type": "register",
+    "user": "84cb4955a2be_sju329",
+    "ts": 1763017328.684789
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 6 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:08Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 7 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:08Z"
+  },
+  {
+    "type": "register",
+    "user": "4eaff7d7bd46_0cesar",
+    "ts": 1763017328.9223857
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 7 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:09Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 8 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:09Z"
+  },
+  {
+    "type": "register",
+    "user": "5f9d6e95e1c6_55l6y4",
+    "ts": 1763017329.2295444
+  },
+  {
+    "type": "register",
+    "user": "8fb4d90193d7_et3nn3",
+    "ts": 1763017329.4569209
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 8 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:09Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 9 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:09Z"
+  },
+  {
+    "type": "register",
+    "user": "0776a9614b64_6bsx4d",
+    "ts": 1763017329.7135494
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 9 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:09Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_711725",
+    "message": "mensagem 10 do go_client_711725 para canal geral",
+    "timestamp": "2025-11-13T07:02:09Z"
+  },
+  {
+    "type": "register",
+    "user": "188568d309ad_gu2ny6",
+    "ts": 1763017330.0269358
+  },
+  {
+    "type": "channel_message",
+    "channel": "announcements",
+    "user": "go_client_194332",
+    "message": "mensagem 10 do go_client_194332 para canal announcements",
+    "timestamp": "2025-11-13T07:02:10Z"
+  },
+  {
+    "type": "register",
+    "user": "826bb0257c31_mdjz1p",
+    "ts": 1763017330.3553877
+  },
+  {
+    "type": "register",
+    "user": "a92f7775c930_4z2hja",
+    "ts": 1763017330.6845994
+  },
+  {
+    "type": "register",
+    "user": "941af09c9e52_xvnrwe",
+    "ts": 1763017330.9201047
+  },
+  {
+    "type": "register",
+    "user": "61c73770cf6b_470sk8",
+    "ts": 1763017331.8711045
+  },
+  {
+    "type": "register",
+    "user": "f2d452df4fe6_1oxtix",
+    "ts": 1763017332.2081232
+  },
+  {
+    "type": "register",
+    "user": "go_client_468371",
+    "ts": 1763017483.109416
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 1 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:43Z"
+  },
+  {
+    "type": "register",
+    "user": "Otávio",
+    "ts": 1763017483.188606
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 2 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:43Z"
+  },
+  {
+    "type": "register",
+    "user": "go_client_461255",
+    "ts": 1763017483.5978997
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 1 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:43Z"
+  },
+  {
+    "type": "register",
+    "user": "Carlos",
+    "ts": 1763017483.6563692
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017483.9031534
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 3 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:43Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 2 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:44Z"
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017484.1782734
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 4 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:44Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 3 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:44Z"
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017484.4361281
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 5 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:44Z"
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017484.7566192
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 4 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:44Z"
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017485.0543258
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 6 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:45Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 5 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:45Z"
+  },
+  {
+    "type": "register",
+    "user": "Gabriel",
+    "ts": 1763017485.4306479
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 7 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:45Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 6 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:45Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 8 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:45Z"
+  },
+  {
+    "type": "register",
+    "user": "Natália",
+    "ts": 1763017486.031129
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 7 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:46Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 9 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:46Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 8 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:46Z"
+  },
+  {
+    "type": "register",
+    "user": "Carlos",
+    "ts": 1763017486.51304
+  },
+  {
+    "type": "channel_message",
+    "channel": "geral",
+    "user": "go_client_468371",
+    "message": "mensagem 10 do go_client_468371 para canal geral",
+    "timestamp": "2025-11-13T07:04:46Z"
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 9 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:46Z"
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017487.0237744
+  },
+  {
+    "type": "channel_message",
+    "channel": "random",
+    "user": "go_client_461255",
+    "message": "mensagem 10 do go_client_461255 para canal random",
+    "timestamp": "2025-11-13T07:04:47Z"
+  },
+  {
+    "type": "register",
+    "user": "Carlos",
+    "ts": 1763017487.3590145
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017487.702001
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017487.9492674
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017489.039325
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017489.4719307
+  },
+  {
+    "type": "register",
+    "user": "Eduardo",
+    "ts": 1763017489.820487
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017490.1482852
+  },
+  {
+    "type": "register",
+    "user": "Ana",
+    "ts": 1763017490.530856
+  },
+  {
+    "type": "register",
+    "user": "Carlos",
+    "ts": 1763017490.9630492
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_462533",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_462533 para canal geral",
+    "timestamp": "2025-11-13 07:31:41"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:48"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:48"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_12093",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_12093 para canal geral",
+    "timestamp": "2025-11-13 17:32:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:21"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:21"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:22"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:22"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_357163 para canal announcements",
+    "timestamp": "2025-11-13 17:51:24"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_357163",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_357163 para canal dev",
+    "timestamp": "2025-11-13 17:51:27"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 8 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 9 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_491855",
+    "channel": "random",
+    "message": "mensagem 10 do go_client_491855 para canal random",
+    "timestamp": "2025-11-13 17:52:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:21"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_72417",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_72417 para canal dev",
+    "timestamp": "2025-11-13 17:53:21"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_62322",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_62322 para canal random",
+    "timestamp": "2025-11-13 17:57:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:36"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:36"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 17:59:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:42"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:42"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:42"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 8 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 9 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 10 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 17:59:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 17:59:46"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:51"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:51"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:52"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Eduardo",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 17:59:54"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:56"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:56"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:57"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 17:59:57"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:57"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:57"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:58"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:58"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:59"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:59"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 17:59:59"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:04"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:04"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:04"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:05"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:05"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 8 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:06"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 9 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:06"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 10 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:00:06"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:00:08"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:10"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:10"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:11"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:11"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:11"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:12"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:12"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:13"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:13"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:13"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Bruno",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:00:14"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom trabalho pessoal",
+    "timestamp": "2025-11-13 18:00:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:24"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:24"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:26"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:26"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:27"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:27"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:28"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:00:30"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:31"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:31"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:32"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:32"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:33"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:33"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:33"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Carlos",
+    "message": "rs rs interessante",
+    "timestamp": "2025-11-13 18:00:34"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:34"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:34"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_694317 para canal geral",
+    "timestamp": "2025-11-13 18:00:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:40"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:41"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:00:41"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:41"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:42"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:46"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:46"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:48"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:48"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:00:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:00:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:53"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:53"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Carlos",
+    "message": "bom trabalho pessoal",
+    "timestamp": "2025-11-13 18:00:53"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:54"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:54"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:54"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:55"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:55"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:56"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:00:59"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:00"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:00"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:00"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:01"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:01"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:02"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:02"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:02"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_694317 para canal dev",
+    "timestamp": "2025-11-13 18:01:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:01:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:06"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:07"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:07"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:07"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:08"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:08"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:09"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:09"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:09"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_694317 para canal announcements",
+    "timestamp": "2025-11-13 18:01:10"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Bruno",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:01:13"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:01:13"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:01:14"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:01:14"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:01:14"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_694317",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_694317 para canal random",
+    "timestamp": "2025-11-13 18:01:14"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:00"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:01"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:01"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:02"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:02"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 8 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 9 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:04"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 10 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:04"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:08"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:08"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:08"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:09"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:09"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:10"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:10:10"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:10"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:10"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:11"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:11"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:16"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:16"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:18"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:10:19"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:22"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:22"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:22"
+  },
+  {
+    "type": "private_message",
+    "src": "Eduardo",
+    "dst": "Diana",
+    "message": "rs rs interessante",
+    "timestamp": "2025-11-13 18:10:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:24"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:24"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:24"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:10:28"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 1 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:29"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 2 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:29"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 3 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:29"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 4 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:30"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 5 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:30"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 6 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:31"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 7 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:31"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 8 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:32"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 9 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:32"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "dev",
+    "message": "mensagem 10 do go_client_580722 para canal dev",
+    "timestamp": "2025-11-13 18:10:32"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:36"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:36"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:37"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "boa ideia!",
+    "timestamp": "2025-11-13 18:10:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:38"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:39"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:45"
+  },
+  {
+    "type": "private_message",
+    "src": "Eduardo",
+    "dst": "Marcos",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:10:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 8 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:46"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 9 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:46"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "random",
+    "message": "mensagem 10 do go_client_580722 para canal random",
+    "timestamp": "2025-11-13 18:10:46"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:10:47"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:51"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:51"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:51"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:52"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:53"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:53"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_580722",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_580722 para canal announcements",
+    "timestamp": "2025-11-13 18:10:53"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "posso ajudar com isso?",
+    "timestamp": "2025-11-13 18:10:56"
+  },
+  {
+    "type": "channel_message",
+    "user": "Eduardo",
+    "channel": "geral",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:11:06"
+  },
+  {
+    "type": "channel_message",
+    "user": "Alice",
+    "channel": "geral",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:14:02"
+  },
+  {
+    "type": "private_message",
+    "src": "Alice",
+    "dst": "Eduardo",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:14:12"
+  },
+  {
+    "type": "channel_message",
+    "user": "Alice",
+    "channel": "geral",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:14:12"
+  },
+  {
+    "type": "channel_message",
+    "user": "Alice",
+    "channel": "geral",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:14:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "Alice",
+    "channel": "geral",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:16:55"
+  },
+  {
+    "type": "channel_message",
+    "user": "Alice",
+    "channel": "geral",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:17:04"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:19:05"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:19:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:19:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:19:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "posso ajudar com isso?",
+    "timestamp": "2025-11-13 18:19:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "ok, entendido",
+    "timestamp": "2025-11-13 18:19:55"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:20:05"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Natália",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:20:12"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:20:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:20:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:20:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:20:45"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Natália",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:20:50"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:20:55"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Carlos",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:21:03"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "posso ajudar com isso?",
+    "timestamp": "2025-11-13 18:21:05"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom trabalho pessoal",
+    "timestamp": "2025-11-13 18:21:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:21:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:21:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "posso ajudar com isso?",
+    "timestamp": "2025-11-13 18:21:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:21:55"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:22:05"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Alice",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:22:07"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "boa ideia!",
+    "timestamp": "2025-11-13 18:22:15"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Eduardo",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:22:20"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "rs rs interessante",
+    "timestamp": "2025-11-13 18:22:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "boa ideia!",
+    "timestamp": "2025-11-13 18:22:35"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "boa ideia!",
+    "timestamp": "2025-11-13 18:22:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "vou fechar o deploy agora",
+    "timestamp": "2025-11-13 18:22:55"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:23:05"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom trabalho pessoal",
+    "timestamp": "2025-11-13 18:23:15"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13 18:23:25"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "bom dia a todos!",
+    "timestamp": "2025-11-13 18:28:34"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_715754",
+    "dst": "f2d452df4fe6_al3pnk",
+    "message": "oi f2d452df4fe6_al3pnk, sou go_client_715754 — teste pm",
+    "timestamp": "2025-11-13 18:32:18"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_715754",
+    "dst": "826bb0257c31_mdjz1p",
+    "message": "oi 826bb0257c31_mdjz1p, sou go_client_715754 — teste pm",
+    "timestamp": "2025-11-13 18:32:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "Larissa",
+    "channel": "announcements",
+    "message": "boa ideia!",
+    "timestamp": "2025-11-13 18:32:26"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_507832",
+    "dst": "0ac4d24d9306_5bu2im",
+    "message": "oi 0ac4d24d9306_5bu2im, sou go_client_507832 — teste pm",
+    "timestamp": "2025-11-13 18:35:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "Larissa",
+    "channel": "announcements",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:35:53"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_507832",
+    "dst": "a92f7775c930_fvogug",
+    "message": "oi a92f7775c930_fvogug, sou go_client_507832 — teste pm",
+    "timestamp": "2025-11-13 18:35:54"
+  },
+  {
+    "type": "channel_message",
+    "user": "Larissa",
+    "channel": "announcements",
+    "message": "alguem free para testar?",
+    "timestamp": "2025-11-13 18:36:00"
+  },
+  {
+    "type": "channel_message",
+    "user": "Larissa",
+    "channel": "announcements",
+    "message": "ola, tudo bem?",
+    "timestamp": "2025-11-13 18:36:06"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_366229",
+    "dst": "3f41aca502c3_cd4rnm",
+    "message": "oi 3f41aca502c3_cd4rnm, sou go_client_366229 — teste pm",
+    "timestamp": "2025-11-13 18:38:17"
+  },
+  {
+    "type": "channel_message",
+    "user": "Larissa",
+    "channel": "announcements",
+    "message": "bom trabalho pessoal",
+    "timestamp": "2025-11-13 18:38:23"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:42"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:43"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:44"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_23652",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_23652 para canal announcements",
+    "timestamp": "2025-11-13 18:49:45"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_23652",
+    "dst": "941af09c9e52_kqyonh",
+    "message": "oi 941af09c9e52_kqyonh, sou go_client_23652 — teste pm",
+    "timestamp": "2025-11-13 18:49:45"
+  },
+  {
+    "type": "channel_message",
+    "user": "Larissa",
+    "channel": "announcements",
+    "message": "posso ajudar com isso?",
+    "timestamp": "2025-11-13 18:49:49"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:00.381198"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:00.706095"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:01.011818"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:01.316964"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:01.622691"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:01.927647"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:02.232665"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:02.538054"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:02.843156"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:03.148553"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_449540",
+    "dst": "go_client_677271",
+    "message": "oi go_client_677271, sou go_client_449540 — teste pm",
+    "timestamp": "2025-11-13T19:14:03.454047"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 1 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:05.459672"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 2 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:05.764639"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 3 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:06.069961"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 4 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:06.376168"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 5 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:06.681092"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 6 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:06.986032"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 7 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:07.291414"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 8 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:07.599434"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 9 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:07.904510"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "announcements",
+    "message": "mensagem 10 do go_client_449540 para canal announcements",
+    "timestamp": "2025-11-13T19:14:08.209378"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_449540",
+    "dst": "8fb4d90193d7_p0we3w",
+    "message": "oi 8fb4d90193d7_p0we3w, sou go_client_449540 — teste pm",
+    "timestamp": "2025-11-13T19:14:08.516383"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "posso ajudar com isso?",
+    "timestamp": "2025-11-13T19:14:09.582504"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:10.523748"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:10.829235"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:11.134319"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:11.439351"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:11.744473"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:12.049560"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:12.354685"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:12.661793"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:12.967721"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:13.272894"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_449540",
+    "dst": "3f41aca502c3_cd4rnm",
+    "message": "oi 3f41aca502c3_cd4rnm, sou go_client_449540 — teste pm",
+    "timestamp": "2025-11-13T19:14:13.578368"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 1 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:15.583578"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 2 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:15.888875"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 3 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:16.194176"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 4 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:16.501242"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 5 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:16.807712"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 6 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:17.114312"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 7 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:17.419514"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 8 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:17.727025"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 9 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:18.032155"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "random",
+    "message": "mensagem 10 do go_client_449540 para canal random",
+    "timestamp": "2025-11-13T19:14:18.338177"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_449540",
+    "dst": "0ac4d24d9306_5bu2im",
+    "message": "oi 0ac4d24d9306_5bu2im, sou go_client_449540 — teste pm",
+    "timestamp": "2025-11-13T19:14:18.646506"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "agendamos reunião?",
+    "timestamp": "2025-11-13T19:14:18.809648"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 1 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:20.651413"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 2 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:20.956834"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 3 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:21.261976"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 4 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:21.566943"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 5 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:21.872010"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 6 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:22.177258"
+  },
+  {
+    "type": "private_message",
+    "src": "Gabriel",
+    "dst": "Natália",
+    "message": "boa ideia!",
+    "timestamp": "2025-11-13T19:14:22.460381"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 7 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:22.482459"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 8 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:22.787485"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 9 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:23.092687"
+  },
+  {
+    "type": "channel_message",
+    "user": "go_client_449540",
+    "channel": "geral",
+    "message": "mensagem 10 do go_client_449540 para canal geral",
+    "timestamp": "2025-11-13T19:14:23.397928"
+  },
+  {
+    "type": "private_message",
+    "src": "go_client_449540",
+    "dst": "010f09d55e35_mrr423",
+    "message": "oi 010f09d55e35_mrr423, sou go_client_449540 — teste pm",
+    "timestamp": "2025-11-13T19:14:23.703438"
+  },
+  {
+    "type": "channel_message",
+    "user": "Gabriel",
+    "channel": "random",
+    "message": "rs rs interessante",
+    "timestamp": "2025-11-13T19:14:28.041098"
+  }
+]

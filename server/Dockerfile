@@ -1,5 +1,7 @@
-FROM python:3.10
+FROM python:3.11-slim
 WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
+COPY server.py .
+COPY templates ./templates
+RUN pip install pyzmq flask
+EXPOSE 8080 5555
 CMD ["python", "server.py"]

@@ -1,21 +1,14 @@
-FROM golang:1.24.5
+FROM golang:1.22
 
 WORKDIR /app
 
-# dependências do sistema para zmq4
-RUN apt-get update && apt-get install -y \
-    pkg-config \
-    libzmq3-dev \
- && rm -rf /var/lib/apt/lists/*
+# Instala dependências necessárias para libzmq
+RUN apt-get update && apt-get install -y libzmq3-dev pkg-config
 
-COPY go.mod go.sum ./
-RUN go mod download
+COPY client.go .
 
-COPY . .
-
+RUN go mod init client
+RUN go get github.com/pebbe/zmq4
 RUN go build -o client
-
-# cria diretório para persistência
-RUN mkdir -p /app/data
 
 CMD ["./client"]

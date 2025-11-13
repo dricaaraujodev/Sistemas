@@ -1,9 +1,6 @@
-# Proxy/Dockerfile
-FROM python:3.12-slim
-
+FROM python:3.11-slim
 WORKDIR /app
-COPY Proxy.py .
-
+COPY proxy.py .
 RUN pip install pyzmq
-
-CMD ["python", "Proxy.py"]
+EXPOSE 5557 5558
+CMD ["python", "proxy.py"]
