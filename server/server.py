@@ -1,15 +1,13 @@
 import zmq
 import json
 import os
-from datetime import datetime
-import time
+from datetime import datetime, timedelta
 
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
 
-# --- Endereços de comunicação ---
-REQ_BIND = "tcp://0.0.0.0:5555"   # REQ/REP dos bots
-PUB_CONNECT = "tcp://broker:5557" # PUB -> XSUB do broker
+REQ_BIND = "tcp://0.0.0.0:5555"
+PUB_CONNECT = "tcp://broker:5557"
 
 context = zmq.Context()
 rep = context.socket(zmq.REP)
@@ -20,20 +18,44 @@ pub.connect(PUB_CONNECT)
 
 print("🧠 Servidor iniciado — REQ/REP em 5555, PUB → broker:5557")
 
-# Estado de usuários e canais
-users = {}       # users[name] = {"online": True/False, "ts": "2025-11-12T14:00:00Z"}
+# =========================================================
+# ESTRUTURAS DE DADOS
+# =========================================================
+users = {}  # { "Ana": {"online": True, "ts": "..."} }
 channels = ["geral"]
+offline_messages = {}  # { "Ana": [("Bruno", "Oi", timestamp), ...] }
 
-
+# =========================================================
+# FUNÇÕES AUXILIARES
+# =========================================================
 def now_iso():
     return datetime.utcnow().isoformat()
 
-
 def broadcast(channel, message):
-    """Envia uma mensagem pública via PUB socket."""
+    """Envia mensagem pública a todos os inscritos no canal."""
     pub.send_string(f"{channel}|{message}")
 
+def store_offline_message(dst, src, message):
+    """Armazena mensagens destinadas a usuários offline."""
+    if dst not in offline_messages:
+        offline_messages[dst] = []
+    offline_messages[dst].append({
+        "src": src,
+        "message": message,
+        "timestamp": now_iso()
+    })
 
+def deliver_offline_messages(user):
+    """Entrega mensagens armazenadas para o usuário quando ele faz login."""
+    msgs = offline_messages.pop(user, [])
+    for m in msgs:
+        payload = f"[OFFLINE MSG] {user} recebeu (de {m['src']}): \"{m['message']}\""
+        pub.send_string(f"{user}|{payload}")
+        print(f"📨 Entregue mensagem offline → {user}: \"{m['message']}\"")
+
+# =========================================================
+# LOOP PRINCIPAL
+# =========================================================
 while True:
     try:
         req_msg = rep.recv_json()
@@ -46,41 +68,31 @@ while True:
     ts = now_iso()
 
     # =========================================================
-    # LOGIN - Servidor
+    # LOGIN
     # =========================================================
     if service == "login":
         user = data.get("user")
-        ts = datetime.now().isoformat()
 
-        # Validação de usuário
         if not user or not user.strip():
             error_msg = "Usuário não informado ou inválido"
             print(f"❌ LOGIN FALHOU: {error_msg}")
             rep.send_json({
                 "service": "login",
-                "data": {
-                    "status": "ERRO",
-                    "message": error_msg,
-                    "timestamp": ts
-                }
+                "data": {"status": "ERRO", "message": error_msg, "timestamp": ts}
             })
             continue
 
-        # Marca o usuário como online
         users[user] = {"online": True, "ts": ts}
-        print(f"✅ LOGIN SUCESSO: {user} conectado às {ts}")
+        print(f"✅ LOGIN: {user} entrou às {ts}")
 
-        # Notifica o canal geral sobre a entrada
         broadcast("geral", f"[JOIN] {user} entrou no canal geral")
 
-        # Envia resposta de sucesso ao cliente
+        # Entregar mensagens offline, se existirem
+        deliver_offline_messages(user)
+
         rep.send_json({
             "service": "login",
-            "data": {
-                "status": "OK",
-                "message": f"Login de {user} realizado com sucesso!",
-                "timestamp": ts
-            }
+            "data": {"status": "OK", "message": f"Login de {user} realizado com sucesso!", "timestamp": ts}
         })
         continue
 
@@ -119,14 +131,13 @@ while True:
             })
             continue
 
-        # Usa prefixo [PUB]
-        payload = f"[PUB] {user} enviou ao canal {channel}: \"{message}\""
-        print(f"📢 BROADCAST: {payload}")
+        payload = f"[PUB] {user}: \"{message}\""
         broadcast(channel, payload)
+        print(f"📢 {user} → {channel}: {message}")
 
         rep.send_json({
             "service": "publish",
-            "data": {"status": "OK", "timestamp": ts}
+            "data": {"status": "OK", "message": "Mensagem pública enviada", "timestamp": ts}
         })
         continue
 
@@ -146,28 +157,36 @@ while True:
             continue
 
         if users.get(dst, {}).get("online"):
-            # Cria o payload no formato esperado pelo bot.js
-            payload_privada = f"[PRV] {dst} recebeu mensagem privada de {src}: \"{message}\""
+            payload = f"[PRV] {src} → {dst}: \"{message}\""
+            pub.send_string(f"{dst}|{payload}")
+            print(f"🔒 PRIVADA ENTREGUE: {src} → {dst}: {message}")
 
-            # Confirma entrega ao remetente
             rep.send_json({
                 "service": "message",
-                "data": {"status": "DELIVERED", "timestamp": ts}
+                "data": {"status": "DELIVERED", "message": f"Mensagem enviada a {dst}", "timestamp": ts}
             })
-
-            # Publica no tópico do destinatário
-            pub.send_string(f"{dst}|{payload_privada}")
-            print(f"🔒 ENTREGUE: {src} -> {dst}: \"{message}\"")
         else:
-            print(f"❌ NÃO ENTREGUE (offline): {src} → {dst}: \"{message}\"")
+            print(f"💤 {dst} está offline — armazenando mensagem de {src}")
+            store_offline_message(dst, src, message)
             rep.send_json({
                 "service": "message",
-                "data": {
-                    "status": "OFFLINE",
-                    "message": f"{dst} está offline.",
-                    "timestamp": ts
-                }
+                "data": {"status": "STORED", "message": f"{dst} offline — mensagem armazenada", "timestamp": ts}
             })
+        continue
+
+    # =========================================================
+    # LOGOUT
+    # =========================================================
+    if service == "logout":
+        user = data.get("user")
+        if user in users:
+            users[user]["online"] = False
+            print(f"👋 LOGOUT: {user} saiu.")
+            broadcast("geral", f"[LEFT] {user} saiu do chat.")
+        rep.send_json({
+            "service": "logout",
+            "data": {"status": "OK", "timestamp": ts}
+        })
         continue
 
     # =========================================================
