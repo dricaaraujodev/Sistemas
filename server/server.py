@@ -46,24 +46,34 @@ while True:
     ts = now_iso()
 
     # =========================================================
-    # LOGIN
+    # LOGIN - Servidor
     # =========================================================
     if service == "login":
         user = data.get("user")
-        if not user:
+        ts = datetime.now().isoformat()
+
+        # Validação de usuário
+        if not user or not user.strip():
+            error_msg = "Usuário não informado ou inválido"
+            print(f"❌ LOGIN FALHOU: {error_msg}")
             rep.send_json({
                 "service": "login",
-                "data": {"status": "ERRO", "message": "Usuário não informado", "timestamp": ts}
+                "data": {
+                    "status": "ERRO",
+                    "message": error_msg,
+                    "timestamp": ts
+                }
             })
             continue
 
         # Marca o usuário como online
         users[user] = {"online": True, "ts": ts}
-        print(f"✅ LOGIN: {user}")
+        print(f"✅ LOGIN SUCESSO: {user} conectado às {ts}")
 
-        # Envia broadcast de entrada usando prefixo [JOIN]
+        # Notifica o canal geral sobre a entrada
         broadcast("geral", f"[JOIN] {user} entrou no canal geral")
 
+        # Envia resposta de sucesso ao cliente
         rep.send_json({
             "service": "login",
             "data": {

@@ -37,22 +37,42 @@ sub.subscribe(BOT_NAME);
 console.log(`🤖 ${BOT_NAME} (ID: ${BOT_ID}): conectado, subscrito em 'geral' e '${BOT_NAME}'`);
 
 // ============================================================
-// LOGIN
+// LOGIN - Bot
 // ============================================================
 const ts = new Date().toISOString();
-await req.send(JSON.stringify({ service: "login", data: { user: BOT_NAME, timestamp: ts } }));
-const [loginReply] = await req.receive();
 
 try {
-  const reply = JSON.parse(loginReply.toString());
-  const status = reply.data?.status;
-  if (status === "OK" || status === "SUCCESS") {
-    console.log(`✅ Login de ${BOT_NAME}: SUCESSO!`);
-  } else {
-    console.log(`❌ Login de ${BOT_NAME}: FALHA → ${loginReply.toString()}`);
+  // Envia requisição de login
+  await req.send(JSON.stringify({
+    service: "login",
+    data: { user: BOT_NAME, timestamp: ts }
+  }));
+
+  const [loginReply] = await req.receive();
+
+  if (!loginReply) {
+    console.error("⚠️ Nenhuma resposta do servidor durante o login.");
+    process.exit(1);
   }
-} catch (e) {
-  console.log(`⚠️ Erro ao processar resposta de login: ${loginReply.toString()}`);
+
+  const reply = JSON.parse(loginReply.toString());
+  const { status, message, timestamp } = reply.data || {};
+
+  // Verificação da resposta
+  if (status === "OK" || status === "SUCCESS") {
+    console.log(`✅ Login de ${BOT_NAME}: SUCESSO (${message || "Conectado"})`);
+  } else {
+    console.warn(`❌ Falha no login de ${BOT_NAME}: ${message || "Falha ao tentar logar"}`);
+  }
+
+  // Log adicional com timestamp do servidor (se houver)
+  if (timestamp) {
+    console.log(`🕒 Timestamp do servidor: ${timestamp}`);
+  }
+
+} catch (err) {
+  console.error(`🚨 Erro ao processar resposta de login: ${err.message}`);
+  console.error(err);
 }
 
 // ============================================================
